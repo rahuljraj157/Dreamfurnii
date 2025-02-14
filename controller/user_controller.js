@@ -5,6 +5,7 @@ const Category = require("../model/category")
 const cart = require("../model/cart")
 const bcrypt = require("bcryptjs");
 
+
 const nodemailer = require('nodemailer');
 
 // -----inputs conditions
