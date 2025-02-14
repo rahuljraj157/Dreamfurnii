@@ -3,7 +3,8 @@ const otpModel = require("../model/otpModel");
 const Product = require("../model/product")
 const Category = require("../model/category")
 const cart = require("../model/cart")
-const bcrypt=require("bcrypt")
+const bcrypt = require("bcryptjs");
+
 const nodemailer = require('nodemailer');
 
 // -----inputs conditions
