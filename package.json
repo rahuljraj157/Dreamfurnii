@@ -33,8 +33,11 @@
     "path": "^0.12.7",
     "puppeteer": "^22.1.0",
     "razorpay": "^2.9.2",
-    "sharp": "^0.33.2",
+    "sharp": "^0.33.5",
     "speakeasy": "^2.0.0",
     "sweetalert2": "^11.6.13"
-  }
+  },
+  "engines": {
+  "node": "20.x"
+}
 }
