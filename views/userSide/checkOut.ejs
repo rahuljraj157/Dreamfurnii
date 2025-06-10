@@ -476,7 +476,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                   // alert(response.razorpay_payment_id);
                   // alert(response.razorpay_order_id);
                   // alert(response.razorpay_signature)
+                  console.log(response,"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
                   verifyPayment(response,order)
+                  
               },
               "prefill": {
                   "name": "Gaurav Kumar",
@@ -511,7 +513,7 @@ console.log('verify payment called');
                   (response.razorpaySuccess)
                   console.log('razorpay success');
                   const url = '/orderPlaced/';
-                  window.location.href = url;
+                   window.location.href = url;
               }
           })
       }

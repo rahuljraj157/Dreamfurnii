@@ -31,6 +31,9 @@ const loadCheckOut = async(req,res)=>{
               return res.redirect("/login");
           }
           const cartDetails = await Cart.findOne({ userId: user._id }).populate('items.product_id');
+          if(!cartDetails ){
+            res.redirect("/loadShop")
+          }
           const coupons = await Coupon.find({ status: "Active" });
           res.render("userSide/checkOut", { user, cartDetails, coupons });
       }
@@ -208,10 +211,12 @@ const verifypayment = async (req, res) => {
 
     generated_signature = hmac_sha256(
       razorpay_order_id + "|" + razorpay_payment_id,
-      "Z2X6UflP4aZyN729TbN8DUvZ"
+      "LpGw2y0I4mNeHqYiA8NfL2e1"
     );
+    console.log(generated_signature,"kkkkkkkkkkkkkkkkkkkkkk")
 
     if (generated_signature == razorpay_signature) {
+
       console.log("payment is successful");
       const update = await Order.updateOne(
         { _id: receiptID },
