@@ -8,8 +8,8 @@ const Coupon = require("../model/coupon")
 const Wallet = require("../model/wallet")
 
 var instance = new Razorpay({
-  key_id: "rzp_test_8UFoOV8AuZ0XKu",
-  key_secret: "Z2X6UflP4aZyN729TbN8DUvZ",
+  key_id: "rzp_test_EUcxGMApO8fynt",
+  key_secret: "LpGw2y0I4mNeHqYiA8NfL2e1",
 });
 // Function to generate HMAC-SHA256
 function hmac_sha256(data, key) {
